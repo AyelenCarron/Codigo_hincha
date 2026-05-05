@@ -5,26 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Código Hincha - Muro</title>
 
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
 </head>
+
 <body>
 
-<header>  
-    <div class="muro">
+    <header>
+        <h1>Código Hincha <button>☰</button></h1>
+    </header>
 
-        <h1>Código Hincha</h1>
-        <p>¡Bienvenido al muro de Código Hincha! Aquí podrás compartir tus pensamientos, opiniones y experiencias relacionadas con el mundo del fútbol. Este es un espacio para que los fanáticos del deporte rey se conecten, discutan y celebren su pasión por el fútbol </p>                         
-    
-        <nav> 
-        <a href="#noticias">Noticias</a> 
-        <a href="#partidos">Partidos</a> 
-        <a href="login.html">Login</a> 
-        <a href="   " target=""></a> 
-    </nav>
+    <main>
 
-</header>  
- <main> 
-</footer>
+        <section class="publicar">
+            <div class="usuario">
+                    <img src="img/avatar.png" class="avatar">
+                    <input type="text" placeholder="¿Qué estás pensando?">
+            </div>
+        </section>
 
+        <section class="feed">
+
+            <article class="post">
+                <div class="usuario">
+                    <img src="img/avatar.png" class="avatar">
+                    <input type="text" placeholder= "Martín Córdoba @martinT • Talleres • hace 2h">
+                </div>
+
+                <p>
+                ¡La T no se mancha! Tremendo triunfo en el Kempes.
+                Esta hinchada es la más fiel de Argentina.
+                ¡Dale Talleres carajo!
+                </p>
+
+                <img src="futbol.jpg" class="img-post">
+
+                <div class="reacciones">
+                        👍      👎      💬
+                </div>
+            </article>
+        </section>        
+    </main>
+    <footer>
+        <div class="comentario">
+                <img src="img/avatar.png" class="avatar">
+                <input type="text" placeholder="Escribe un comentario...">
+                <button>ENVIAR</button>
+        </div> 
+    </footer>
 </body>
 </html>
+
