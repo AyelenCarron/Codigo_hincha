@@ -1,62 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Código Hincha - Muro</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Código Hincha - Muro</title>
 
-    <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="styles.css">
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
-</head>
+    </head>
 
-<body>
+    <body>
 
     <header>
-        <h1>Código Hincha <button>☰</button></h1>
+            <h1>Código Hincha <button>☰</button></h1>
     </header>
 
-    <main>
+        <main>
 
-        <section class="publicar">
-            <div class="usuario">
-                    <img src="img/avatar.png" class="avatar">
-                    <input type="text" placeholder="¿Qué estás pensando?">
-            </div>
-        </section>
-
-        <section class="feed">
-
-            <article class="post">
-                <div class="usuario">
-                    <img src="img/avatar.png" class="avatar">
-                    <h2>Martín Córdoba @martinT • Talleres • hace 2h</h2>
+            <section class="post">
+                <div class="user-post">
+                        <img src="img/avatar.png" alt="Foto de perfil del usuario" class="avatar">
+                        <input type="text" placeholder="¿Qué estás pensando?">
                 </div>
+            </section>
 
-                <p>
-                ¡La T no se mancha! Tremendo triunfo en el Kempes.
-                Esta hinchada es la más fiel de Argentina.
-                ¡Dale Talleres carajo!
-                </p>
+            <section class="feed">
 
-                <img src="futbol.jpg" class="img-post">
+                <article class="post-feed">
+                    <div class="user-feed">
+                        <img src="img/avatar.png" alt="Foto de perfil del usuario" class="avatar">
+                        <h2>Martín Córdoba @martinT • Talleres • hace 2h</h2>
+                    </div>
 
-                <div class="reacciones">
-                    <button>👍</button>
-                    <button>👎</button>
-                    <button>💬</button>    
-                </div>
-            </article>
-        </section>        
-    </main>
+                    <p>
+                    ¡La T no se mancha! Tremendo triunfo en el Kempes.
+                    Esta hinchada es la más fiel de Argentina.
+                    ¡Dale Talleres carajo!
+                    </p>
+
+                    <img src="futbol.jpg" alt="Imagen del partido" class="img-post">
+
+                    <div class="reactions">
+                        <button>👍</button>
+                        <button>👎</button>
+                        <button>💬</button>    
+                    </div>
+                </article>
+            </section>        
+        </main>
     <footer>
-        <div class="comentario">
-                <img src="img/avatar.png" class="avatar">
-                <input type="text" placeholder="Escribe un comentario...">
-                <button>ENVIAR</button>
-        </div> 
+            <div class="comment">
+                    <img src="img/avatar.png" alt="Foto de perfil del usuario" class="avatar">
+                    <input type="text" placeholder="Escribe un comentario...">
+                    <button>Enviar</button>
+            </div> 
     </footer>
-</body>
+    </body>
 </html>
 
