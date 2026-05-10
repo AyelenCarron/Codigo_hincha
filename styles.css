@@ -1,0 +1,86 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: serif;
+            background-color: #fff;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .tabs {
+            margin-bottom: 15px;
+        }
+
+        .tabs a {
+            margin-right: 30px;
+            text-decoration: none;
+            color: #000;
+            font-size: 16px;
+        }
+
+        .tabs a.active {
+            text-decoration: underline;
+        }
+
+        .search-box {
+            margin-bottom: 20px;
+        }
+
+        .search-box input {
+            padding: 5px;
+            font-size: 14px;
+            width: 300px;
+        }
+
+        .user-list {
+            list-style: none;
+        }
+
+        .user-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .avatar {
+            width: 50px;
+            height: 50px;
+        }
+
+        .user-details h3 {
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .user-details p {
+            font-size: 14px;
+            margin: 2px 0 0 0;
+            color: #555;
+        }
+
+        .follow-btn {
+            padding: 5px 15px;
+            font-size: 14px;
+            cursor: pointer;
+        }
