@@ -1,36 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Red Social - Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Código Hincha - Login</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Código Hincha</h1>
-  </header>
+  <div class="phone-wrapper">
+    <div class="screen">
+      
+      <header>
+        <h1>Código Hincha</h1>
+      </header>
 
-  <main>
-    <img src="logo-codigoh.png" alt="Copa sostenida por dos manos">
-    <section class="login">
-      <h2>Bienvenido/a</h2>
-      <form action="/login" method="post">
-        <div class="form-group">
-          <label for="correo">Correo electrónico</label>
-          <input type="email" id="correo" name="email" required>
+      <main>
+        <div class="login">
+          <img src="logo-codigoh.png" alt="Copa sostenida por dos manos" class="login-logo">
+          <h2>Bienvenido/a</h2>
+          <form action="/login" method="post">
+            <div class="form-group">
+              <label for="correo">Correo electrónico</label>
+              <input type="email" id="correo" name="email" required placeholder="tu@email.com">
+            </div>
+
+            <div class="form-group">
+              <label for="password">Contraseña</label>
+              <input type="password" id="password" name="password" required placeholder="••••••••">
+            </div>
+
+            <button type="submit">Iniciar sesión</button>
+          </form>
         </div>
+      </main>
 
-        <div class="form-group">
-          <label for="password">Contraseña</label>
-          <input type="password" id="password" name="password" required>
-        </div>
-
-        <button type="submit">Iniciar sesión</button>
-      </form>
-      <p>¿No tenés cuenta? <a href="register.html"> Registrate</a></p>
-    </section>
-  </main>
-
-  
+      <footer>
+        <p>¿No tenés cuenta? <a href="register.html">Registrate</a></p>
+      </footer>
+    </div>
+    <div class="home-btn"></div>
+  </div>
 </body>
 </html>

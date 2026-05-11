@@ -1,62 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Código Hincha - Muro</title>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Código Hincha - Muro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="phone-wrapper">
+        <div class="screen">
 
-        <link rel="stylesheet" href="styles.css">
+            <header>
+                <h1>Código Hincha</h1>
+                <button id="burger" class="menu-btn">☰</button>
+                <nav id="nav-menu" class="nav-links">
+                    <a href="muro.html" class="active">Home</a>
+                    <a href="profile.html">Mi perfil</a>
+                    <a href="followed.html">Seguidores</a>
+                    <a href="#" id="logout" class="logout-link">Cerrar sesión</a>
+                </nav>
+            </header>
 
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-
-    </head>
-
-    <body>
-
-    <header>
-            <h1>Código Hincha <button>☰</button></h1>
-    </header>
-
-        <main>
-
-            <section class="post">
-                <div class="user-post">
-                        <img src="img/avatar.png" alt="Foto de perfil del usuario" class="avatar">
+            <main class="feed-main">
+                <section class="post-create">
+                    <div class="user-post">
+                        <div class="avatar">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="#555">
+                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                            </svg>
+                        </div>
                         <input type="text" placeholder="¿Qué estás pensando?">
-                </div>
-            </section>
-
-            <section class="feed">
-
-                <article class="post-feed">
-                    <div class="user-feed">
-                        <img src="img/avatar.png" alt="Foto de perfil del usuario" class="avatar">
-                        <h2>Martín Córdoba @martinT • Talleres • hace 2h</h2>
                     </div>
+                </section>
 
-                    <p>
-                    ¡La T no se mancha! Tremendo triunfo en el Kempes.
-                    Esta hinchada es la más fiel de Argentina.
-                    ¡Dale Talleres carajo!
-                    </p>
+                <section class="feed">
+                    <article class="post-feed">
+                        <div class="user-feed">
+                            <div class="avatar">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="#555">
+                                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                </svg>
+                            </div>
+                            <div class="user-meta">
+                                <h2>Martín Córdoba <span class="username">@martinT</span> <span class="team-badge">Talleres</span> <span class="time">hace 2h</span></h2>
+                            </div>
+                        </div>
 
-                    <img src="futbol.jpg" alt="Imagen del partido" class="img-post">
+                        <p class="post-text">
+                            ¡La T no se mancha! Tremendo triunfo en el Kempes.
+                            Esta hinchada es la más fiel de Argentina.
+                            ¡Dale Talleres carajo!
+                        </p>
 
-                    <div class="reactions">
-                        <button>👍</button>
-                        <button>👎</button>
-                        <button>💬</button>    
+                        <img src="futbol.jpg" alt="Imagen del partido" class="img-post">
+
+                        <div class="reactions">
+                            <button class="reaction-btn"><i class="fas fa-thumbs-up"></i></button>
+                            <button class="reaction-btn"><i class="fas fa-thumbs-down"></i></button>
+                            <button class="reaction-btn"><i class="fas fa-comment"></i></button>
+                        </div>
+                    </article>
+                </section>
+            </main>
+
+            <footer class="comment-footer">
+                <div class="comment-box">
+                    <div class="avatar">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="#555">
+                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                        </svg>
                     </div>
-                </article>
-            </section>        
-        </main>
-    <footer>
-            <div class="comment">
-                    <img src="img/avatar.png" alt="Foto de perfil del usuario" class="avatar">
                     <input type="text" placeholder="Escribe un comentario...">
-                    <button>Enviar</button>
-            </div> 
-    </footer>
-    </body>
+                    <button class="send-btn">Enviar</button>
+                </div>
+            </footer>
+        </div>
+        <div class="home-btn"></div>
+    </div>
+</body>
 </html>
-

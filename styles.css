@@ -1,141 +1,853 @@
-* {
-    box-sizing: border-box;
+•⁠  ⁠{
     margin: 0;
     padding: 0;
-    
-    }
+    box-sizing: border-box;
+}
 
 body {
     font-family: serif;
     background-color: #fff;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
-    padding: 20px;
-    }
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 400px;
-    padding: 20px 0;
+    align-items: flex-start;
+    padding: 30px 15px;
 }
 
-.form-container {
+/*  TO MAKE IT RESPONSIVE  */
+.phone-wrapper {
+    width: 340px;
+    background: #e8e8e8;
+    border-radius: 40px;
+    padding: 45px 12px 35px 12px;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+}
+
+.screen {
+    width: 100%;
     background: white;
-    width: 100%;
-    max-width: 400px;
-    padding: 30px;
     border-radius: 25px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-}
-#registerForm {
+    overflow: hidden;
+    min-height: 580px;
     display: flex;
     flex-direction: column;
 }
-label {
-    font-size: 14px;
-    color: #4a5568;
-    margin-bottom: 5px;
-    margin-top: 12px;
+
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 18px 14px 18px;
+    position: relative;
 }
 
-input[type="text"], 
-input[type="email"], 
-input[type="date"], 
-input[type="password"] {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #d1d5db;
+header h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #000;
+}
+
+#burger, header button {
+    position: absolute;
+    right: 18px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 10px;
+    background: white;
+    border: 1px solid #ddd;
     border-radius: 8px;
-    background-color: #f9fafb;
-    color: #1a202c;
-    font-size: 16px;
-    outline: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 99;
+    min-width: 180px;
+    flex-direction: column;
+    padding: 8px 0;
 }
 
-input::placeholder {
-    color: #cbd5e0;
+.nav-links.active {
+    display: flex;
 }
 
-h1 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    }
+.nav-links a {
+    display: block;
+    padding: 10px 16px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    transition: background 0.2s;
+    border-bottom: 1px solid #f0f0f0;
+}
 
-h2 {
+.nav-links a:last-child {
+    border-bottom: none;
+}
+
+.nav-links a:hover {
+    background: #f5f5f5;
+}
+
+.logout-link {
+    color: #d32f2f !important;
+}
+
+/* LOGIN CONTENT */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 24px 40px;
+}
+
+.login {
+    width: 100%;
+}
+
+.login h2 {
     font-size: 24px;
-    margin-bottom: 15px;
-    }
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 24px;
+    text-align: center;
+    font-family: serif;
+}
 
+.login img {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 150px;
+    height: auto;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 6px;
+    font-family: serif;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    font-family: serif;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+    border-color: #000;
+}
+
+.form-group input::placeholder {
+    color: #999;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px 15px;
+    margin-top: 8px;
+    border: 1px solid #000;
+    background: white;
+    color: #000;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: serif;
+    transition: all 0.2s;
+}
+
+button[type="submit"]:hover {
+    background: #f5f5f5;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 10px 15px;
+    margin-top: 8px;
+    border: 1px solid #000;
+    background: white;
+    color: #000;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: serif;
+    transition: all 0.2s;
+}
+
+.btn-primary:hover {
+    background: #f5f5f5;
+}
+
+footer {
+    padding: 14px 18px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+}
+
+footer p {
+    font-size: 12px;
+    color: #555;
+    font-family: serif;
+}
+
+footer a {
+    color: #1976d2;
+    text-decoration: underline;
+}
+
+/* REGISTER */
+.form-container {
+    width: 100%;
+}
+
+.form-container h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-container form label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 6px;
+    margin-top: 12px;
+    font-family: serif;
+}
+
+.form-container form input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    font-family: serif;
+    transition: border-color 0.2s;
+}
+
+.form-container form input:focus {
+    border-color: #000;
+}
+
+.form-container form input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+}
+
+.form-container form label:has(input[type="checkbox"]) {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 16px 0;
+    cursor: pointer;
+}
+
+.form-container form a {
+    color: #1976d2;
+    text-decoration: underline;
+}
+
+/*  MURO  */
+.post {
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+}
+
+.user-post {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-post .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.user-post input {
+    flex: 1;
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 14px;
+    outline: none;
+    font-family: serif;
+}
+
+.user-post input:focus {
+    border-color: #999;
+}
+
+.feed {
+    padding: 0;
+}
+
+.post-feed {
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+}
+
+.user-feed {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.user-feed .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.user-feed h2 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    line-height: 1.3;
+}
+
+.post-feed > p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.img-post {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    object-fit: cover;
+}
+
+.reactions {
+    display: flex;
+    gap: 16px;
+    padding-top: 8px;
+}
+
+.reactions button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.reactions button:hover {
+    background: #f0f0f0;
+}
+
+.comment {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    background: white;
+    border-top: 1px solid #eee;
+}
+
+.comment .avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.comment input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    font-size: 13px;
+    outline: none;
+    font-family: serif;
+}
+
+.comment button {
+    background: #000;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 16px;
+    font-size: 13px;
+    cursor: pointer;
+    font-family: serif;
+}
+
+/* PROFILE */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 18px 14px 18px;
+    position: relative;
+    border-bottom: 1px solid #eee;
+}
+
+nav h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #000;
+}
+
+nav button {
+    position: absolute;
+    right: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+nav button img {
+    width: 24px;
+    height: 24px;
+}
+
+section:has(> img[alt="Profile Icon"]) {
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    height: 120px;
+    margin-bottom: 50px;
+}
+
+section:has(> img[alt="Profile Icon"]) > img:first-child {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: white;
+    padding: 4px;
+    position: absolute;
+    bottom: -40px;
+    left: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+section:has(> img[alt="Profile Icon"]) > button {
+    position: absolute;
+    bottom: -30px;
+    right: 20px;
+    background: white;
+    border: 1px solid #ddd;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+section:has(> img[alt="Profile Icon"]) > button img {
+    width: 18px;
+    height: 18px;
+}
+
+main > div {
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+}
+
+main > div > div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+main > div > div:first-child img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+main > div > div:first-child p {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #333;
+}
+
+main > div > div:first-child p b {
+    font-weight: 700;
+    color: #000;
+}
+
+main > div > div:last-child p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* FOLLOWED */
 .tabs {
-    margin-bottom: 15px;
-    }
+    display: flex;
+    background: white;
+    border-bottom: 1px solid #eee;
+}
 
 .tabs a {
-    margin-right: 30px;
+    flex: 1;
+    text-align: center;
+    padding: 14px;
     text-decoration: none;
-    color: #000;
-    font-size: 16px;
-    }
+    color: #666;
+    font-size: 14px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+}
 
 .tabs a.active {
-    text-decoration: underline;
-    }
+    color: #000;
+    border-bottom-color: #000;
+}
 
 .search-box {
-    margin-bottom: 20px;
-    }
+    padding: 12px 16px;
+    background: white;
+    border-bottom: 1px solid #eee;
+}
 
 .search-box input {
-    padding: 5px;
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
     font-size: 14px;
-    width: 300px;
-    }
+    outline: none;
+    font-family: serif;
+}
 
 .user-list {
     list-style: none;
-    }
+}
 
 .user-item {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px 0;
-        border-bottom: 1px solid #ccc;
-        }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    border-bottom: 1px solid #f0f0f0;
+}
 
 .user-info {
     display: flex;
     align-items: center;
-    gap: 15px;
-    }
-
-.avatar {
-    width: 50px;
-    height: 50px;
-    }
-
-.user-details h3 {
-        font-size: 16px;
-        margin: 0;
-    }
-
-.user-details p {
-        font-size: 14px;
-        margin: 2px 0 0 0;
-        color: #555;
-    }
-
-.follow-btn {
-        padding: 5px 15px;
-        font-size: 14px;
-        cursor: pointer;
-        }
-
-.nav-links {
-    display: none;
-
+    gap: 12px;
 }
 
+.user-info .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #f0f0f0;
+}
+
+.user-details h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.user-details p {
+    font-size: 13px;
+    color: #666;
+}
+
+.follow-btn {
+    padding: 6px 16px;
+    border: 1px solid #000;
+    background: white;
+    color: #000;
+    border-radius: 16px;
+    font-size: 13px;
+    cursor: pointer;
+    font-family: serif;
+    transition: all 0.2s;
+}
+
+.follow-btn:hover {
+    background: #f5f5f5;
+}
+
+/* TERMS */
+article {
+    padding: 16px;
+    margin-bottom: 20px;
+}
+
+article h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+article p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+}
+
+main form {
+    padding: 16px;
+}
+
+main form label {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 13px;
+    cursor: pointer;
+    margin-bottom: 16px;
+}
+
+main form input[type="checkbox"] {
+    margin-top: 2px;
+    width: auto;
+}
+
+main form a {
+    color: #1976d2;
+    text-decoration: underline;
+}
+
+/* MODE TAB (500px - 767px) */
+@media (min-width: 500px) and (max-width: 767px) {
+    body {
+        padding: 20px;
+        background-color: #f5f5f5;
+    }
+
+    .phone-wrapper {
+        width: 100%;
+        max-width: 500px;
+        background: #e8e8e8;
+        border-radius: 30px;
+        padding: 40px 10px 30px 10px;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    }
+
+    .phone-wrapper::before {
+        top: 16px;
+        width: 70px;
+        height: 5px;
+    }
+
+    .phone-wrapper::after {
+        top: 19px;
+        left: 75px;
+        width: 7px;
+        height: 7px;
+    }
+
+    .home-btn {
+        width: 80px;
+        height: 3px;
+        bottom: 8px;
+    }
+
+    .screen {
+        border-radius: 20px;
+        min-height: 500px;
+    }
+
+    header, nav {
+        padding: 10px 20px 12px;
+    }
+
+    header h1, nav h1 {
+        font-size: 26px;
+    }
+
+    main {
+        padding: 30px 30px 30px;
+    }
+
+    .login h2 {
+        font-size: 26px;
+        margin-bottom: 28px;
+    }
+
+    .form-group {
+        margin-bottom: 18px;
+    }
+
+    .form-group label {
+        font-size: 15px;
+    }
+
+    .form-group input {
+        padding: 12px 14px;
+        font-size: 15px;
+    }
+
+    button[type="submit"] {
+        padding: 12px 15px;
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+    footer {
+        padding: 16px 20px;
+    }
+
+    footer p {
+        font-size: 13px;
+    }
+}
+
+/* MODE DESK (>= 768px) */
+@media (min-width: 768px) {
+    body {
+        padding: 0;
+        background-color: #fff;
+    }
+
+    .phone-wrapper {
+        width: 100%;
+        max-width: 800px;
+        background: transparent;
+        border-radius: 0;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .phone-wrapper::before,
+    .phone-wrapper::after,
+    .home-btn {
+        display: none;
+    }
+
+    .screen {
+        border-radius: 0;
+        min-height: 100vh;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .status-bar {
+        display: none;
+    }
+
+    header, nav {
+        padding: 20px 30px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    header h1, nav h1 {
+        font-size: 32px;
+    }
+
+    #burger, header button, nav button {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        min-width: auto;
+    }
+
+    .nav-links a {
+        border-bottom: none;
+        padding: 8px 16px;
+    }
+
+    main {
+        padding: 40px 30px;
+        max-width: 600px;
+        margin: 0 auto;
+        justify-content: flex-start;
+        padding-top: 40px;
+    }
+
+    .login h2 {
+        font-size: 28px;
+        margin-bottom: 32px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        font-size: 16px;
+    }
+
+    .form-group input {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    button[type="submit"] {
+        padding: 5px 15px;
+        font-size: 14px;
+        margin-top: 12px;
+    }
+
+    footer {
+        padding: 20px 30px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+
+    .user-item {
+        padding: 16px 20px;
+    }
+
+    .post-feed {
+        padding: 20px;
+    }
+
+    section:has(> img[alt="Profile Icon"]) {
+        height: 150px;
+    }
+}
