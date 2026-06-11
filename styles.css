@@ -287,10 +287,10 @@ header h1 {
 }
 
 .nav-links {
+    display: none;
     position: absolute;
     top: 52px;
     right: 14px; 
-    display: flex;
     flex-direction: column;
     align-items: flex-end;
     gap: 8px;
@@ -319,21 +319,26 @@ header h1 {
 
 @media (max-width: 768px) {
     header {
-        position: center;
+        position: relative;
+        width: 100%;
         text-align: center;
         padding: 14px 48px;
     }
 
     header h1 {
+        width: 100%;
         margin: 0;
         font-size: 24px;
+        text-align: center;
     }
 
     .menu-btn {
+        display: block;
         position: absolute;
         top: 14px;
         right: 14px;
         font-size: 22px;
+        z-index: 100;
     }
 }
 /*  feed  */
@@ -361,7 +366,7 @@ header h1 {
 }
 
 .user-post input {
-    flex: 1;
+    flex: 0 1 90%;
     padding: 10px 14px;
     border: 1px solid #ddd;
     border-radius: 20px;

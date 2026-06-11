@@ -12,7 +12,7 @@
 <body>
     <header>
         <h1>El Agite</h1>
-        <button id="burger" class="menu-btn">
+        <button id="burger" class="menu-btn" aria-label="Abrir menú">
             ☰
         </button>
         <nav id="nav-menu" class="nav-links"> 
@@ -81,5 +81,14 @@
     </main>
     <div class="agite-btn">   
     </div>
+
+    <script>
+        const burger = document.getElementById("burger");
+        const navMenu = document.getElementById("nav-menu");
+
+        burger.addEventListener("click", function() {
+            navMenu.classList.toggle("active");
+});
+    </script>
 </body>
 </html>
