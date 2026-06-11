@@ -4,8 +4,11 @@
     box-sizing: border-box;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
+
 body {
-    font-family: "Google Sans", sans-serif;
+    font-family: "Merriweather", serif ;
+    font-size: 12px;
     background-color: #fff;
     min-height: 100vh;
     display: flex;
@@ -41,7 +44,7 @@ header {
     justify-content: center;
     align-items: center;
     padding: 8px 18px 14px 18px;
-    position: relative;
+    position: absolute;
 }
 
 header h1 {
@@ -258,10 +261,94 @@ footer a {
     text-decoration: underline;
 }
 
+/* feed header */
+header {
+    position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 56px;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+    animation: titleFade 0.8s ease-in-out;
+}
+
+.menu-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: none;
+    position: absolute;
+    top: 52px;
+    right: 14px; 
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    background: white;
+        padding: 8px;
+        z-index: 10;
+}
+
+.feed-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+@keyframes titleFade {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        padding: 14px 48px;
+    }
+
+    header h1 {
+        width: 100%;
+        margin: 0;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .menu-btn {
+        display: block;
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        font-size: 22px;
+        z-index: 100;
+    }
+}
 /*  feed  */
 .post {
     padding: 16px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid hwb(0 100% 0%);
+}
+
+.post-create {
+    margin-top: 100px;
 }
 
 .user-post {
@@ -279,12 +366,14 @@ footer a {
 }
 
 .user-post input {
-    flex: 1;
+    flex: 0 1 90%;
     padding: 10px 14px;
     border: 1px solid #ddd;
     border-radius: 20px;
     font-size: 14px;
     outline: none;
+     width: 100%;
+    min-width: 0;
 }
 
 .user-post input:focus {
@@ -325,12 +414,13 @@ footer a {
 .post-feed > p {
     font-size: 14px;
     line-height: 1.5;
-    color: #333;
+    color: #050505;
     margin-bottom: 12px;
 }
 
 .img-post {
     width: 100%;
+    height: auto;
     border-radius: 8px;
     margin-bottom: 12px;
     object-fit: cover;
@@ -356,34 +446,42 @@ footer a {
     background: #f0f0f0;
 }
 
-.comment {
+.comment,
+.comment-box {
     display: flex;
     align-items: center;
     gap: 10px;
     padding: 12px 16px;
     background: white;
     border-top: 1px solid #eee;
+    width: 100%;
+    min-width: 0;
 }
 
-.comment .avatar {
-    width: 32px;
-    height: 32px;
+.comment .avatar,
+.comment-box .avatar {
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     object-fit: cover;
     flex-shrink: 0;
 }
 
-.comment input {
+.comment input,
+.comment-box input {
     flex: 1;
-    padding: 8px 12px;
+    padding: 10px 14px;
     border: 1px solid #ddd;
     border-radius: 16px;
     font-size: 13px;
     outline: none;
+    width: 100%;
+    min-width: 0;
 }
 
-.comment button {
-    background: #000;
+.comment button,
+.comment-box button  {
+    background: #82cad5;
     color: white;
     border: none;
     padding: 8px 16px;
@@ -634,37 +732,39 @@ main form a {
 /* MODE TAB (500px - 767px) */
 @media (min-width: 500px) and (max-width: 767px) {
     body {
-        padding: 20px;
-        background-color: #f5f5f5;
-    }
+    padding: 20px;
+    background-color: #f5f5f5;
+}
 
-    .phone-wrapper {
-        width: 100%;
-        max-width: 500px;
-        background: #e8e8e8;
-        border-radius: 30px;
-        padding: 40px 10px 30px 10px;
-        box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-    }
+.phone-wrapper {
+    width: 100%;
+    max-width: 500px;
+    background: #e8e8e8;
+    border-radius: 30px;
+    padding: 40px 10px 30px 10px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
 
-    .phone-wrapper::before {
-        top: 16px;
-        width: 70px;
-        height: 5px;
-    }
+.phone-wrapper::before {
+    top: 16px;
+    width: 70px;
+    height: 5px;
+    left: 50%;
+    transform: translateX(-50%);    
+}
 
-    .phone-wrapper::after {
+.phone-wrapper::after {
         top: 19px;
         left: 75px;
         width: 7px;
         height: 7px;
-    }
+}
 
-    .home-btn {
+.home-btn {
         width: 80px;
         height: 3px;
         bottom: 8px;
-    }
+}
 
     .screen {
         border-radius: 20px;
@@ -723,26 +823,26 @@ main form a {
         background-color: #fff;
     }
 
-    .phone-wrapper {
-        width: 100%;
-        max-width: 800px;
-        background: transparent;
-        border-radius: 0;
-        padding: 0;
-        box-shadow: none;
+.phone-wrapper {
+    width: 100%;
+    max-width: 800px;
+    background: transparent;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
     }
 
-    .phone-wrapper::before,
-    .phone-wrapper::after,
-    .home-btn {
-        display: none;
-    }
+.phone-wrapper::before,
+.phone-wrapper::after,
+.home-btn {
+    display: none;
+}
 
-    .screen {
-        border-radius: 0;
-        min-height: 100vh;
-        max-width: 800px;
-        margin: 0 auto;
+.screen {
+    border-radius: 0;
+    min-height: 100vh;
+    max-width: 800px;
+    margin: 0 auto;
     }
 
     .status-bar {
