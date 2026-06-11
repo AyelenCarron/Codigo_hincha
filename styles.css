@@ -264,6 +264,7 @@ footer a {
 /* feed header */
 header {
     position: center;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -277,6 +278,7 @@ header h1 {
 }
 
 .menu-btn {
+    display: block;
     position: absolute;
     top: 16px;
     right: 16px;
@@ -284,25 +286,65 @@ header h1 {
     border: none;
     font-size: 24px;
     cursor: pointer;
+    z-index: 100;
 }
 
 .nav-links {
     display: none;
     position: absolute;
-    top: 52px;
-    right: 14px; 
+    top: 14px;
+    right: 52px; 
     flex-direction: column;
     align-items: flex-end;
-    gap: 8px;
+    gap: 12px;
     background: white;
-        padding: 8px;
-        z-index: 10;
+    border: 1px solid #ddd;
+    padding: 8px;
+    z-index: 99;
+}
+
+.nav-links.active {
+    display: flex;
 }
 
 .feed-main {
     display: grid;
     grid-template-columns: 1fr;
     gap: 16px;
+}
+
+.feed-page .menu-btn,
+#burger {
+    display: block !important;
+    position: fixed !important;
+    top: 16px !important;
+    right: 16px !important;
+    width: 36px;
+    height: 36px;
+    background: white;
+    color: black;
+    border: 1px solid #ccc;
+    font-size: 24px;
+    line-height: 1;
+    z-index: 9999;
+}
+
+.feed-page .nav-links {
+    display: none !important;
+    position: fixed !important;
+    top: 16px !important;
+    right: 60px !important;
+    flex-direction: column;
+    align-items: flex-end;
+    background: white;
+    border: 1px solid #ddd;
+    padding: 8px;
+    gap: 8px;
+    z-index: 9998;
+}
+
+.feed-page .nav-links.active {
+    display: flex !important;
 }
 
 @keyframes titleFade {
@@ -372,7 +414,7 @@ header h1 {
     border-radius: 20px;
     font-size: 14px;
     outline: none;
-     width: 100%;
+    width: 100%;
     min-width: 0;
 }
 
@@ -924,4 +966,21 @@ main form a {
     section:has(> img[alt="Profile Icon"]) {
         height: 150px;
     }
+}
+#nav-menu {
+    display: none !important;
+    position: fixed !important;
+    top: 16px !important;
+    right: 60px !important;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    background: white;
+    border: 1px solid #ddd;
+    padding: 8px;
+    z-index: 9998;
+}
+
+#nav-menu.active {
+    display: flex !important;
 }
