@@ -837,3 +837,14 @@ main form a {
         height: 150px;
     }
 }
+
+
+
+.form-section {
+    border: none;      
+    background: none;   
+    margin: 0;          
+    padding: 0;         
+    box-shadow: none;  
+}
+
