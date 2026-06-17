@@ -4,11 +4,8 @@
     box-sizing: border-box;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
-
 body {
-    font-family: "Merriweather", serif ;
-    font-size: 12px;
+    font-family: "Google Sans", sans-serif;
     background-color: #fff;
     min-height: 100vh;
     display: flex;
@@ -44,7 +41,7 @@ header {
     justify-content: center;
     align-items: center;
     padding: 8px 18px 14px 18px;
-    position: absolute;
+    position: relative;
 }
 
 header h1 {
@@ -110,7 +107,7 @@ main {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     padding: 20px 24px 40px;
 }
 
@@ -165,10 +162,9 @@ main {
 }
 
 button[type="submit"] {
-    width: auto;
-    padding: 8px 24px;
-    margin: 12px auto 0;
-    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    margin-top: 8px;
     border: 1px solid #000;
     background: white;
     color: #000;
@@ -183,7 +179,22 @@ button[type="submit"]:hover {
     background: #f5f5f5;
 }
 
-
+.btn-primary {
+    font-family: "Google Sans", sans-serif;
+    display: block;
+    text-align: center;
+    width: 50%;
+    padding: 10px 15px;
+    margin-top: 8px;
+    border: 1px solid #000;
+    background: white;
+    color: #000;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
 
 .btn-primary:hover {
     background: #f5f5f5;
@@ -193,7 +204,7 @@ footer {
     font-family: "Google Sans", sans-serif;
     padding: 14px 18px;
     text-align: center;
-    
+    border-top: 1px solid #eee;
 }
 
 footer p {
@@ -261,136 +272,10 @@ footer a {
     text-decoration: underline;
 }
 
-/* feed header */
-header {
-    position: center;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 16px 56px;
-}
-
-header h1 {
-    margin: 0;
-    text-align: center;
-    animation: titleFade 0.8s ease-in-out;
-}
-
-.menu-btn {
-    display: block;
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 100;
-}
-
-.nav-links {
-    display: none;
-    position: absolute;
-    top: 14px;
-    right: 52px; 
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 12px;
-    background: white;
-    border: 1px solid #ddd;
-    padding: 8px;
-    z-index: 99;
-}
-
-.nav-links.active {
-    display: flex;
-}
-
-.feed-main {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 16px;
-}
-
-.feed-page .menu-btn,
-#burger {
-    display: block !important;
-    position: fixed !important;
-    top: 16px !important;
-    right: 16px !important;
-    width: 36px;
-    height: 36px;
-    background: white;
-    color: black;
-    border: 1px solid #ccc;
-    font-size: 24px;
-    line-height: 1;
-    z-index: 9999;
-}
-
-.feed-page .nav-links {
-    display: none !important;
-    position: fixed !important;
-    top: 16px !important;
-    right: 60px !important;
-    flex-direction: column;
-    align-items: flex-end;
-    background: white;
-    border: 1px solid #ddd;
-    padding: 8px;
-    gap: 8px;
-    z-index: 9998;
-}
-
-.feed-page .nav-links.active {
-    display: flex !important;
-}
-
-@keyframes titleFade {
-    from {
-        opacity: 0;
-        transform: translateY(-8px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@media (max-width: 768px) {
-    header {
-        position: relative;
-        width: 100%;
-        text-align: center;
-        padding: 14px 48px;
-    }
-
-    header h1 {
-        width: 100%;
-        margin: 0;
-        font-size: 24px;
-        text-align: center;
-    }
-
-    .menu-btn {
-        display: block;
-        position: absolute;
-        top: 14px;
-        right: 14px;
-        font-size: 22px;
-        z-index: 100;
-    }
-}
 /*  feed  */
 .post {
     padding: 16px;
-    border-bottom: 1px solid hwb(0 100% 0%);
-}
-
-.post-create {
-    margin-top: 100px;
+    border-bottom: 1px solid #eee;
 }
 
 .user-post {
@@ -408,14 +293,12 @@ header h1 {
 }
 
 .user-post input {
-    flex: 0 1 90%;
+    flex: 1;
     padding: 10px 14px;
     border: 1px solid #ddd;
     border-radius: 20px;
     font-size: 14px;
     outline: none;
-    width: 100%;
-    min-width: 0;
 }
 
 .user-post input:focus {
@@ -456,13 +339,12 @@ header h1 {
 .post-feed > p {
     font-size: 14px;
     line-height: 1.5;
-    color: #050505;
+    color: #333;
     margin-bottom: 12px;
 }
 
 .img-post {
     width: 100%;
-    height: auto;
     border-radius: 8px;
     margin-bottom: 12px;
     object-fit: cover;
@@ -488,42 +370,34 @@ header h1 {
     background: #f0f0f0;
 }
 
-.comment,
-.comment-box {
+.comment {
     display: flex;
     align-items: center;
     gap: 10px;
     padding: 12px 16px;
     background: white;
     border-top: 1px solid #eee;
-    width: 100%;
-    min-width: 0;
 }
 
-.comment .avatar,
-.comment-box .avatar {
-    width: 40px;
-    height: 40px;
+.comment .avatar {
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
     object-fit: cover;
     flex-shrink: 0;
 }
 
-.comment input,
-.comment-box input {
+.comment input {
     flex: 1;
-    padding: 10px 14px;
+    padding: 8px 12px;
     border: 1px solid #ddd;
     border-radius: 16px;
     font-size: 13px;
     outline: none;
-    width: 100%;
-    min-width: 0;
 }
 
-.comment button,
-.comment-box button  {
-    background: #82cad5;
+.comment button {
+    background: #000;
     color: white;
     border: none;
     padding: 8px 16px;
@@ -683,16 +557,15 @@ main > div > div:last-child p {
     align-items: center;
     padding: 12px 16px;
     border-bottom: 1px solid #f0f0f0;
-    gap: 12px;
 }
 
 .user-info {
     display: flex;
-    align-items: flex-start ;
+    align-items: center;
     gap: 12px;
 }
 
-.user-info.avatar {
+.user-info .avatar {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -704,13 +577,12 @@ main > div > div:last-child p {
 .user-details h3 {
     font-size: 15px;
     font-weight: 600;
-    margin-bottom: 0px;
+    margin-bottom: 2px;
 }
 
 .user-details p {
     font-size: 13px;
     color: #666;
-    margin-top: 2px;
 }
 
 .follow-btn {
@@ -722,8 +594,6 @@ main > div > div:last-child p {
     font-size: 13px;
     cursor: pointer;
     transition: all 0.2s;
-    align-self: center;
-    flex-shrink: 0; 
 }
 
 .follow-btn:hover {
@@ -774,39 +644,37 @@ main form a {
 /* MODE TAB (500px - 767px) */
 @media (min-width: 500px) and (max-width: 767px) {
     body {
-    padding: 20px;
-    background-color: #f5f5f5;
-}
+        padding: 20px;
+        background-color: #f5f5f5;
+    }
 
-.phone-wrapper {
-    width: 100%;
-    max-width: 500px;
-    background: #e8e8e8;
-    border-radius: 30px;
-    padding: 40px 10px 30px 10px;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-}
+    .phone-wrapper {
+        width: 100%;
+        max-width: 500px;
+        background: #e8e8e8;
+        border-radius: 30px;
+        padding: 40px 10px 30px 10px;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    }
 
-.phone-wrapper::before {
-    top: 16px;
-    width: 70px;
-    height: 5px;
-    left: 50%;
-    transform: translateX(-50%);    
-}
+    .phone-wrapper::before {
+        top: 16px;
+        width: 70px;
+        height: 5px;
+    }
 
-.phone-wrapper::after {
+    .phone-wrapper::after {
         top: 19px;
         left: 75px;
         width: 7px;
         height: 7px;
-}
+    }
 
-.home-btn {
+    .home-btn {
         width: 80px;
         height: 3px;
         bottom: 8px;
-}
+    }
 
     .screen {
         border-radius: 20px;
@@ -865,31 +733,33 @@ main form a {
         background-color: #fff;
     }
 
-.phone-wrapper {
-    width: 100%;
-    max-width: 800px;
-    background: transparent;
-    border-radius: 0;
-    padding: 0;
-    box-shadow: none;
+    .phone-wrapper {
+        width: 100%;
+        max-width: 800px;
+        background: transparent;
+        border-radius: 0;
+        padding: 0;
+        box-shadow: none;
     }
 
-.phone-wrapper::before,
-.phone-wrapper::after,
-.home-btn {
-    display: none;
-}
+    .phone-wrapper::before,
+    .phone-wrapper::after,
+    .home-btn {
+        display: none;
+    }
 
-.screen {
-    border-radius: 0;
-    min-height: 100vh;
-    max-width: 800px;
-    margin: 0 auto;
+    .screen {
+        border-radius: 0;
+        min-height: 100vh;
+        max-width: 800px;
+        margin: 0 auto;
     }
 
     .status-bar {
         display: none;
     }
+
+
 
     header h1, nav h1 {
         font-size: 32px;
@@ -966,21 +836,4 @@ main form a {
     section:has(> img[alt="Profile Icon"]) {
         height: 150px;
     }
-}
-#nav-menu {
-    display: none !important;
-    position: fixed !important;
-    top: 16px !important;
-    right: 60px !important;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 8px;
-    background: white;
-    border: 1px solid #ddd;
-    padding: 8px;
-    z-index: 9998;
-}
-
-#nav-menu.active {
-    display: flex !important;
 }
