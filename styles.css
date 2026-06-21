@@ -838,4 +838,77 @@ main form a {
     padding: 0;         
     box-shadow: none;  
 }
+/* ===== COPA QUE GIRA IDA Y VUELTA ===== */
+.copa-wrapper {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* La copa: solo ancho fijo, alto automático para no deformarla */
+.copa {
+  width: 560px;          /* Ancho grande */
+  height: auto;          /* Alto automático, mantiene proporción original */
+  position: relative;
+  transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.copa img {
+  width: 100%;
+  height: auto;          /* Mantiene la proporción original de la imagen */
+  display: block;        /* Elimina espacio extra abajo */
+  filter: drop-shadow(0 8px 15px rgba(0,0,0,0.3));
+  max-width: none !important;
+  border-radius: 0 !important;  /* <-- Quitar borde redondeado */
+  clip-path: none !important;     /* <-- Quitar recorte */
+  overflow: visible !important;   /* <-- Mostrar todo */
+}
+
+/* Sombra ajustada al ancho de la copa */
+.sombra-copa {
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;          /* Más ancha para cubrir la base de la copa */
+  height: 25px;
+  background: radial-gradient(ellipse, rgba(0,0,0,0.3), transparent 70%);
+  border-radius: 10%;
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* PASAR EL MOUSE: gira y se mueve a la derecha */
+.copa-wrapper:hover .copa {
+  transform: rotate(360deg) translateX(100px);
+}
+
+.copa-wrapper:hover .sombra-copa {
+  transform: translateX(100px) scaleX(1.3);
+  opacity: 0.5;
+}
+
+/* SACAR EL MOUSE: vuelve girando al otro lado */
+.copa-wrapper:not(:hover) .copa {
+  transform: rotate(-360deg) translateX(0);
+}
+
+.copa-wrapper:not(:hover) .sombra-copa {
+  transform: translateX(-50%) scaleX(1);
+  opacity: 1;
+}
+@media (max-width: 480px) {
+  .copa {
+    width: 220px;        /* Un poco más chica en celular */
+  }
+  .sombra-copa {
+    width: 440px;
+  }
+  .copa-wrapper:hover .copa {
+    transform: rotate(360deg) translateX(60px);
+  }
+  .copa-wrapper:hover .sombra-copa {
+    transform: translateX(60px) scaleX(1.3);
+  }
+}
 
