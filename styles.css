@@ -8,18 +8,20 @@ body {
     font-family: "Google Sans", sans-serif;
     background-color: #fff;
     min-height: 100vh;
+    display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     padding: 30px 15px;
 }
 
 /*  TO MAKE IT RESPONSIVE  */
 .phone-wrapper {
     width: 340px;
+    margin: 0 auto;
     background: #e8e8e8;    
     position: relative;  
     display: flex;
-    flex-direction: column
+    flex-direction: column;
 }
 
 .screen {
@@ -181,9 +183,9 @@ button[type="submit"]:hover {
     font-family: "Google Sans", sans-serif;
     display: block;
     text-align: center;
-    width: 50%;
+    width: 100%;
     padding: 10px 15px;
-    margin-top: 8px;
+    margin-top: 8px auto 0;
     border: 1px solid #000;
     background: white;
     color: #000;
@@ -911,4 +913,5 @@ main form a {
     transform: translateX(60px) scaleX(1.3);
   }
 }
+
 
