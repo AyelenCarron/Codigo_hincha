@@ -27,7 +27,6 @@ body {
 .screen {
     width: 100%;
     background: white;
-    border-radius: 25px;
     overflow: hidden;
     min-height: 580px;
     display: flex;
@@ -219,7 +218,7 @@ footer a {
 
 /* REGISTER */
 .form-container {
-    width: 100%;
+    width: 80%;
 }
 
 .form-container h2 {
@@ -240,7 +239,7 @@ footer a {
 
 .form-container form input {
     width: 100%;
-    padding: 10px 14px;
+    padding: 14px 14px 14px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 14px;
@@ -619,7 +618,7 @@ article p {
 }
 
 main form {
-    padding: 16px;
+    padding: 5px;
 }
 
 main form label {
@@ -673,7 +672,6 @@ main form a {
     }
 
     .screen {
-        border-radius: 20px;
         min-height: 500px;
     }
 
@@ -746,7 +744,7 @@ main form a {
         min-height: 100vh;
         max-width: 800px;
         margin: 0 auto;
-    }
+    } 
 
     .status-bar {
         display: none;
