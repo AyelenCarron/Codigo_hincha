@@ -24,16 +24,6 @@ body {
     flex-direction: column;
 }
 
-.screen {
-    width: 100%;
-    background: white;
-    overflow: hidden;
-    min-height: 580px;
-    display: flex;
-    flex-direction: column;
-}
-
-
 header {
     font-family: "Google Sans", sans-serif;
     display: flex;
@@ -654,7 +644,6 @@ main > div > div:last-child p {
 /* FOLLOWED */
 .tabs {
     display: flex;
-    background: white;
     border-bottom: 1px solid #eee;
 }
 
@@ -677,7 +666,6 @@ main > div > div:last-child p {
 
 .search-box {
     padding: 12px 16px;
-    background: white;
     border-bottom: 1px solid #eee;
 }
 
@@ -815,10 +803,6 @@ main form a {
         bottom: 8px;
     }
 
-    .screen {
-        min-height: 500px;
-    }
-
     header, nav {
         padding: 10px 20px 12px;
     }
@@ -882,13 +866,6 @@ main form a {
     .home-btn {
         display: none;
     }
-
-    .screen {
-        border-radius: 0;
-        min-height: 100vh;
-        max-width: 800px;
-        margin: 0 auto;
-    } 
 
     .status-bar {
         display: none;
