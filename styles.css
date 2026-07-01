@@ -236,6 +236,16 @@ footer a {
     outline: none;
     transition: border-color 0.2s;
 }
+.form-container form select {
+    width: 100%;
+    padding: 14px 14px 14 px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    background-color: white;
+    cursor: pointer;
+}
 
 .form-container form input:focus {
     border-color: #000;
