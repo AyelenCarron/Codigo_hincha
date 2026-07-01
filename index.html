@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,43 +8,55 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Playwrite+AR+Guides&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Playwrite+AR+Guides&display=swap"
+    rel="stylesheet">
 </head>
+
 <body class="phone-wrapper">
-      
-      <header>
-        <h1>Código Hincha</h1>
-      </header>
 
-      <main>
-        <div class="login">
-          <img src="logo-codigoh.png" alt="Copa sostenida por dos manos" class="login-logo">
-          <h2>Bienvenido/a</h2>
-          <form action="/login" method="post">
-            <p class="form-group">
-              <label for="correo">Correo electrónico</label>
-              <input type="email" id="correo" name="email" required placeholder="tu@email.com">
-            </p>
+  <section class="screen">
+    <header>
+      <h1>Código Hincha</h1>
+    </header>
 
-            <p class="form-group">
-              <label for="password">Contraseña</label>
-              <input type="password" id="password" name="password" required placeholder="••••••••">
-            </p>
-
-            <button type="submit"class="btn-primary">Iniciar sesión</button>
-
-            <p class="register-link">
-              <p>¿No tenés cuenta? <a href="register.html">Registrate gratis</a></p>
-            </P>
-          </form>
-          
+    <main>
+      <div class="login">
+        <div class="copa-wrapper">
+          <div class="copa">
+            <img src="copa-con-manos.png" alt="Copa sostenida por dos manos">
+          </div>
+          <div class="sombra-copa"></div>
         </div>
-      </main>
-      
-      <footer>
-        
-      </footer>
-    
-  
+        <h2>Bienvenido/a</h2>
+        <form action="/login" method="post">
+          <p class="form-group">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="email" required placeholder="tu@email.com">
+          </p>
+
+          <p class="form-group">
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" required placeholder="••••••••">
+          </p>
+
+          <button type="submit" class="btn-primary">Iniciar sesión</button>
+
+          <div class="register-link">
+            <p>¿No tenés cuenta? <a href="register.html">Registrate gratis</a></p>
+          </div>
+        </form>
+
+      </div>
+    </main>
+  </section>
+
+    <footer class="footer-ball">
+        <img src="pelota.png" alt="Pelota de fútbol rodando" class="rolling-ball">
+    </footer>
+
+
+
 </body>
+
 </html>
