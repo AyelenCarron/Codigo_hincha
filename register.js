@@ -27,6 +27,8 @@ document.getElementById('registerForm').addEventListener('submit', function (e) 
     const userData = {
         nombre: document.getElementById('name').value,
         apellido: document.getElementById('lastname').value,
+        email: document.getElementById('email').value,
+        password: document.getElementById('password').value,
         username: document.getElementById('username').value,
         club: document.getElementById('club').value
     };
