@@ -17,8 +17,7 @@ body {
 /*  TO MAKE IT RESPONSIVE  */
 .phone-wrapper {
     width: 340px;
-    margin: 0 auto;
-    background: #e8e8e8;    
+    margin: 0 auto;    
     position: relative;  
     display: flex;
     flex-direction: column;
@@ -193,7 +192,6 @@ footer {
     font-family: "Google Sans", sans-serif;
     padding: 14px 18px;
     text-align: center;
-    border-top: 1px solid #eee;
 }
 
 footer p {
@@ -969,7 +967,7 @@ main form a {
     padding: 0;         
     box-shadow: none;  
 }
-/* ===== COPA QUE GIRA IDA Y VUELTA ===== */
+/* Reversible spinning cup */
 .copa-wrapper {
   position: relative;
   display: inline-block;
@@ -977,39 +975,39 @@ main form a {
   margin-bottom: 20px;
 }
 
-/* La copa: solo ancho fijo, alto automático para no deformarla */
+
 .copa {
-  width: 560px;          /* Ancho grande */
-  height: auto;          /* Alto automático, mantiene proporción original */
+  width: 560px;          
+  height: auto;          
   position: relative;
   transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .copa img {
   width: 100%;
-  height: auto;          /* Mantiene la proporción original de la imagen */
-  display: block;        /* Elimina espacio extra abajo */
+  height: auto;          
+  display: block;      
   filter: drop-shadow(0 8px 15px rgba(0,0,0,0.3));
   max-width: none !important;
-  border-radius: 0 !important;  /* <-- Quitar borde redondeado */
-  clip-path: none !important;     /* <-- Quitar recorte */
-  overflow: visible !important;   /* <-- Mostrar todo */
+  border-radius: 0 !important;  
+  clip-path: none !important;    
+  overflow: visible !important;  
 }
 
-/* Sombra ajustada al ancho de la copa */
+
 .sombra-copa {
   position: absolute;
   bottom: -15px;
   left: 50%;
   transform: translateX(-50%);
-  width: 200px;          /* Más ancha para cubrir la base de la copa */
+  width: 200px;        
   height: 25px;
   background: radial-gradient(ellipse, rgba(0,0,0,0.3), transparent 70%);
   border-radius: 10%;
   transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-/* PASAR EL MOUSE: gira y se mueve a la derecha */
+
 .copa-wrapper:hover .copa {
   transform: rotate(360deg) translateX(100px);
 }
@@ -1019,7 +1017,7 @@ main form a {
   opacity: 0.5;
 }
 
-/* SACAR EL MOUSE: vuelve girando al otro lado */
+
 .copa-wrapper:not(:hover) .copa {
   transform: rotate(-360deg) translateX(0);
 }
@@ -1030,7 +1028,7 @@ main form a {
 }
 @media (max-width: 480px) {
   .copa {
-    width: 220px;        /* Un poco más chica en celular */
+    width: 220px;        
   }
   .sombra-copa {
     width: 440px;
@@ -1048,7 +1046,7 @@ main form a {
     height: 120px;
     overflow: hidden;
     position: relative;
-    background: white;
+    background: none;
 }
 
 .rolling-ball {
