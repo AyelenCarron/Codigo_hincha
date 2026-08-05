@@ -780,6 +780,10 @@ main form a {
     text-decoration: underline;
 }
 
+.terms {
+    text-decoration: none;
+}
+
 /* MODE TAB (500px - 767px) */
 @media (min-width: 500px) and (max-width: 767px) {
     body {
