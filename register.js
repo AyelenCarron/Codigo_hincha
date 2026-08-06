@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const opcion = document.createElement('option');
             opcion.value = club;
             opcion.textContent = club;
-            selectClub.appendChild(opcion);//x
+            selectClub.appendChild(opcion);//xX
         });
     }
 });
