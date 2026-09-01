@@ -1,0 +1,6 @@
+@CodigoHincha.API_HostAddress = http://localhost:5068
+
+GET {{CodigoHincha.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
