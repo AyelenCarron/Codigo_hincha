@@ -4,15 +4,6 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: "Google Sans", sans-serif;
-    background-color: #fff;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px 15px;
-}
 
 /*  TO MAKE IT RESPONSIVE  */
 .phone-wrapper {
@@ -90,6 +81,24 @@ header h1 {
 }
 
 /* LOGIN CONTENT */
+
+body {
+    font-family: "Google Sans", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+.parallax {
+    background-image: url("https://i.imgur.com/A8r4mp7.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 main {
     font-family: "Google Sans", sans-serif;
     flex: 1;
@@ -404,8 +413,8 @@ header h1 {
 }
 
 .user-post .avatar {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     object-fit: cover;
     flex-shrink: 0;
@@ -984,7 +993,7 @@ main form a {
 
 
 .copa {
-  width: 560px;          
+  width: 300px;          
   height: auto;          
   position: relative;
   transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
