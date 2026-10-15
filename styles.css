@@ -173,7 +173,7 @@ button[type="submit"]:hover {
     text-align: center;
     width: 100%;
     padding: 10px 15px;
-    margin-top: 8px auto 0;
+    margin-top: 8px;
     border: 1px solid #000;
     background: white;
     color: #000;
@@ -270,18 +270,12 @@ footer a {
 }
 /* feed */
 header {
-    position: center;
-    width: 100%;
-    display: flex;
+    position:center;
+    width: 100;
+    display:flex;
     justify-content: center;
     align-items: center;
     padding: 16px 56px;
-}
-
-header h1 {
-    margin: 0;
-    text-align: center;
-    animation: titleFade 0.8s ease-in-out;
 }
 
 .menu-btn {
@@ -366,7 +360,7 @@ header h1 {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     header {
         position: relative;
         width: 100%;
