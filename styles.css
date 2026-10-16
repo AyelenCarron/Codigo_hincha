@@ -1,17 +1,72 @@
-•⁠  ⁠{
+•⁠⁠   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    font-family: "Google Sans", sans-serif;
+    min-height: 100vh;
+}
 
-/*  TO MAKE IT RESPONSIVE  */
+body .parallax-login {
+    background-image: url("https://i.imgur.com/A8r4mp7.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh; 
+}
+
+body.parallax-feed {
+    background-image: url("https://i.imgur.com/JmcqtMf.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh; 
+}
+
+body.parallax-profile {
+    background-color: #7e7c79;
+    min-height: 100vh;
+}
+
+body.parallax-register {
+    background-color: #538264;
+    min-height: 100vh;
+}
+
+body.parallax-followed {
+    background-color: #dddbbd;
+    min-height: 100vh;  
+}
+
+body.parallax-terms {
+    background-color: #88bb9c;
+    min-height: 100vh;
+}
+
+
+/* --- CONTENEDOR DE TELÉFONO --- */
 .phone-wrapper {
-    width: 340px;
+    width: 100%;
+    max-width: 340px; /* Ancho simulado de teléfono en escritorio */
     margin: 0 auto;    
     position: relative;  
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
+    background-color: transparent;
+}
+
+/* Ajuste para pantallas grandes donde el wrapper se expande */
+@media (min-width: 768px) {
+    .phone-wrapper {
+        max-width: 800px;
+        background: rgba(255, 255, 255, 0.95); /* Opcional: un fondo blanco translúcido para el contenido de la PC */
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);   /* Opcional: sombrita elegante tipo app */
+    }
 }
 
 header {
@@ -82,22 +137,7 @@ header h1 {
 
 /* LOGIN CONTENT */
 
-body {
-    font-family: "Google Sans", sans-serif;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px 15px;
-}
 
-.parallax {
-    background-image: url("https://i.imgur.com/A8r4mp7.png");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 main {
     font-family: "Google Sans", sans-serif;
@@ -159,11 +199,11 @@ main {
 }
 
 button[type="submit"] {
-    width: 100%;
-    padding: 10px 15px;
+    width: 50%;
+    padding: 10px 10px;
     margin-top: 8px;
     border: 1px solid #000;
-    background: white;
+    background: rgba(153, 184, 204, 0.549);
     color: #000;
     border-radius: 4px;
     font-size: 14px;
@@ -214,6 +254,7 @@ footer a {
 }
 
 /* REGISTER */
+
 .form-container {
     width: 80%;
 }
@@ -232,6 +273,7 @@ footer a {
     color: #000;
     margin-bottom: 6px;
     margin-top: 12px;
+    
 }
 
 .form-container form input {
@@ -277,6 +319,9 @@ footer a {
     color: #1976d2;
     text-decoration: underline;
 }
+
+
+
 /* feed */
 header {
     position: center;
